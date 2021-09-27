@@ -1,7 +1,8 @@
 package com.example.mvvmcache.model
 
 data class RecipeResponse(
-    val results: List<Recipe>
+    val results: List<Recipe>,
+    val offset: Int
 )
 
 data class Recipe(

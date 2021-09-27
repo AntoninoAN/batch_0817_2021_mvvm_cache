@@ -14,7 +14,9 @@ interface RecipeApi {
         @Query("search")
         recipeName: String,
         @Query("apiKey")
-        apiKey: String = "fb3e49784d1e48c880e2b5ae82ea90a8"
+        apiKey: String = "fb3e49784d1e48c880e2b5ae82ea90a8",
+        @Query("offset")
+        page: Int
     ): RecipeResponse
     @GET("recipes/{recipeId}/information")
     suspend fun getRecipeDetails(
