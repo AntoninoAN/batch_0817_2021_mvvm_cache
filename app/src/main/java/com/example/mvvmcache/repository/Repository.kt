@@ -13,12 +13,13 @@ import com.example.mvvmcache.model.remote.RecipeApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import java.util.*
+import javax.inject.Inject
 
 /**
  * Constructor Injection, to avoid hard coupling between classes
  */
 @ExperimentalPagingApi
-class Repository  constructor(
+class Repository @Inject constructor(
     private val service: RecipeApi,
     private val context: Context,
     private val remoteMediator: RecipeMediator,

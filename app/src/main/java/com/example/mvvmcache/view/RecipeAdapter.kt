@@ -1,5 +1,6 @@
 package com.example.mvvmcache.view
 
+import android.view.View
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -22,13 +23,14 @@ class RecipeAdapter: PagingDataAdapter<RecipeEntities,
 
     }
 
-    class RecipeViewHolder: RecyclerView.ViewHolder()
+    class RecipeViewHolder(private val view: View): RecyclerView.ViewHolder(view)
+
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
-        holder.itemView.text = getItem(position).title
+        //holder.itemView.text = getItem(position).title
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
-
+        TODO()
     }
 }
